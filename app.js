@@ -7,26 +7,33 @@ const app = Vue.createApp({
       link: "https://vuejs.org",
       count: 0,
       name: "Anoy",
-      confirmedName:"",
+      confirmedName: "",
     };
   },
-  computed:{
-      fullName(){
-          console.log('Executing Computed')
-        return this.name+'web dev';
-      },
+  watch: {
+    count(value) {
+      if (value > 5) {
+        this.count = 0;
+      }
+    },
+  },
+  computed: {
+    fullName() {
+      console.log("Executing Computed");
+      return this.name + "web dev";
+    },
   },
   methods: {
-      outputFullname(){
-          console.log('Executing Full Name');
-        return this.name+'Web Dev';
-      },
-    setConfirmedName(){
-        this.confirmedName=this.name;
+    outputFullname() {
+      console.log("Executing Full Name");
+      return this.name + "Web Dev";
     },
-      submitForm(){
-    alert('Form Submitted');
-      },
+    setConfirmedName() {
+      this.confirmedName = this.name;
+    },
+    submitForm() {
+      alert("Form Submitted");
+    },
     getText() {
       return this.text1;
     },
