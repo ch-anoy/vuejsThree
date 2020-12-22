@@ -10,6 +10,9 @@ const app = Vue.createApp({
     };
   },
   methods: {
+      submitForm(){
+    alert('Form Submitted');
+      },
     getText() {
       return this.text1;
     },

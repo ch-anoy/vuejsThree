@@ -30,6 +30,12 @@
                         <div>
                             Your Name is : {{name}}
                         </div>
+                        <div class="mt-3">
+                            <form v-on:submit.prevent="submitForm">
+                                <input type="text" class="form-control">
+                                <button>Submit Form </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
