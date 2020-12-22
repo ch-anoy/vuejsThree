@@ -6,10 +6,14 @@ const app = Vue.createApp({
       text2: "bangladesh",
       link: "https://vuejs.org",
       count: 0,
-      name: "",
+      name: "Anoy Chowdhury",
+      confirmedName:"",
     };
   },
   methods: {
+    setConfirmedName(){
+        this.confirmedName=this.name;
+    },
       submitForm(){
     alert('Form Submitted');
       },
