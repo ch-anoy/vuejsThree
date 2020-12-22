@@ -6,11 +6,16 @@ const app = Vue.createApp({
       text2: "bangladesh",
       link: "https://vuejs.org",
       count: 0,
-      name: "Anoy Chowdhury",
+      name: "Anoy",
       confirmedName:"",
     };
   },
+//   computed:{}
   methods: {
+      outputFullname(){
+          console.log('Executing Full Name')
+        return this.name+'Web Dev';
+      },
     setConfirmedName(){
         this.confirmedName=this.name;
     },
@@ -29,8 +34,8 @@ const app = Vue.createApp({
     onDecrement() {
       this.count--;
     },
-    setName(event, lastName) {
-      this.name = event.target.value + lastName;
+    setName(event) {
+      this.name = event.target.value;
     },
   },
 });
