@@ -10,10 +10,15 @@ const app = Vue.createApp({
       confirmedName:"",
     };
   },
-//   computed:{}
+  computed:{
+      fullName(){
+          console.log('Executing Computed')
+        return this.name+'web dev';
+      },
+  },
   methods: {
       outputFullname(){
-          console.log('Executing Full Name')
+          console.log('Executing Full Name');
         return this.name+'Web Dev';
       },
     setConfirmedName(){
