@@ -14,14 +14,13 @@
     <div id="app">
         <div class="container">
             <div class="d-flex flex-column">
-                <div class="box" v-bind:style="{'background-color':boxASelected ? 'red': '#fff'}"
-                    v-on:click="onBoxSelected('A')">
+                <div class="box"
+                :class="boxASelected ? 'active': ''" 
+                @click="onBoxSelected('A')">
                 </div>
-                <div class="box" v-bind:style="{'background-color':boxBSelected ? 'blue': '#fff'}"
-                    v-on:click="onBoxSelected('B')">
+                <div class="box" @click="onBoxSelected('B')">
                 </div>
-                <div class="box" v-bind:style="{'background-color':boxCSelected ? 'green': '#fff'}"
-                    v-on:click="onBoxSelected('C')">
+                <div class="box" @click="onBoxSelected('C')">
                 </div>
             </div>
         </div>
@@ -61,6 +60,10 @@
             height: 150px;
             border: 1px solid rgb(185, 8, 8);
             margin-top: 3rem;
+        }
+
+        .active {
+            background-color: red;
         }
     </style>
 </body>
