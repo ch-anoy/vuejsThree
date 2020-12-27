@@ -1,4 +1,4 @@
-# vuejscrud
+# vuestatemanagement
 
 ## Project setup
 ```
